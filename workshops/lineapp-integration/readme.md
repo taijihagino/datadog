@@ -93,6 +93,17 @@
 
 ## BIとしてのDatadog活用
 
+### RUMのインスツルメント
+AWSであれば、分析できる機能としてCloudWatchが使いやすいかもしれないですが、Datadog RUMを使えばインフラ監視、アプリ性能モニタ、ユーザインタラクション（相互作用、交互作用）をひとつのツールでそれぞれのメトリクスを関連付けて可視化と分析ができます。
+
+［UX Monitoring］→［Application Summary］→［+ New Application］
+![Screenshot 2023-05-16 at 17 22 31](https://github.com/taijihagino/datadog/assets/12064399/af2d38b6-dd3b-45e7-b8ae-bd8aa2b77543)
+
+![Screenshot 2023-05-16 at 17 24 31](https://github.com/taijihagino/datadog/assets/12064399/83573ee6-a342-4714-a6dc-cf418927a5a9)
+
+![Screenshot 2023-05-16 at 17 26 27](https://github.com/taijihagino/datadog/assets/12064399/be74b8b6-7517-45b1-90fa-0a61bd73ca5e)
+
+
 ### Dashbordの作成
 
 
