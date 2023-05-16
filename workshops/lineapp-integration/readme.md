@@ -1,5 +1,5 @@
 ## はじめに
-こちらは、[LINE APIを使ったサンプルアプリケーション](https://zenn.dev/arahabica/books/d4373bd4401d6c){:target="_blank"} をDatadogで監視するためのハンズオンワークショップです。
+こちらは、<a href="https://zenn.dev/arahabica/books/d4373bd4401d6c" target="_blank" rel="noopener noreferrer">LINE APIを使ったサンプルアプリケーション</a>をDatadogで監視するためのハンズオンワークショップです。
 
 対象のアプリケーションは、LIFFアプリ・ミニアプリで会員証発行・入退場管理を行うアプリです。具体的には、LIFFアプリでQRコードを発行し、店舗側のQRコードリーダーでそれを読み込むシーンを想定しています。このアプリは、AWS上にデプロイされているものとなります。
 
