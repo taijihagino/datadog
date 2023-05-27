@@ -146,9 +146,24 @@ AWSであれば、分析できる機能としてCloudWatchが使いやすいか�
 
 ![Screenshot 2023-05-16 at 17 24 31](https://github.com/taijihagino/datadog/assets/12064399/83573ee6-a342-4714-a6dc-cf418927a5a9)
 
+コードスニペットが表示されるので、これを今回は会員証アプリに差し込みます。
 ![Screenshot 2023-05-16 at 17 26 27](https://github.com/taijihagino/datadog/assets/12064399/be74b8b6-7517-45b1-90fa-0a61bd73ca5e)
 
-RUM Application Summaryで、対象のアプリケーションを選択し、Performance Monitoringを選択すると、対象のアプリの各テレメトリデータが可視化されて表示されていることが確認できます。
+対象のファイルは、QRコード表示画面と管理画面です。それぞれ以下のように差し込んでください。
+
+■QRコード画面
+
+``/line-mini-app-hands-on/frontend/pages/index.vue``
+<img width="1446" alt="Screenshot 2023-05-27 at 20 33 23" src="https://github.com/taijihagino/datadog/assets/12064399/912cfa0f-ce54-42aa-85b2-54ed802e65c9">
+
+■管理画面
+
+``/line-mini-app-hands-on/frontend/components/admin/visit-list/VisitList.vue``
+<img width="1444" alt="Screenshot 2023-05-27 at 20 36 24" src="https://github.com/taijihagino/datadog/assets/12064399/45139d8b-e3e7-452d-9c60-eb1919ff745a">
+
+コードの編集が終えたら、再度 ``yarn deploy`` を行います。
+
+デプロイ完了後に会員証アプリを動かすと、データがDatadogへ流れ始めます。 RUM Application Summaryで、対象のアプリケーションを選択し、Performance Monitoringを選択すると、対象のアプリの各テレメトリデータが可視化されて表示されていることが確認できます。
 <img width="1479" alt="Screenshot 2023-05-27 at 20 10 27" src="https://github.com/taijihagino/datadog/assets/12064399/9dbd9ae2-9ea0-4728-8b41-87625e3d06a5">
 
 ### Dashbordの作成
