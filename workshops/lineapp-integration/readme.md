@@ -146,8 +146,8 @@ AWSであれば、分析できる機能としてCloudWatchが使いやすいか�
 
 ![Screenshot 2023-05-16 at 17 24 31](https://github.com/taijihagino/datadog/assets/12064399/83573ee6-a342-4714-a6dc-cf418927a5a9)
 
-コードスニペットが表示されるので、これを今回は会員証アプリに差し込みます。
-![Screenshot 2023-05-16 at 17 26 27](https://github.com/taijihagino/datadog/assets/12064399/be74b8b6-7517-45b1-90fa-0a61bd73ca5e)
+コードスニペットが表示されるので、これを今回は会員証アプリに差し込みます。ここで「dd.env」という環境変数に、対象の環境を識別できる文字列を設定しておくと、対象の環境からDatadogへ送られてくるテレメトリデータにこの値がタグとして付与されるので、Datadog上でデータを整理する際に役に立ちます。
+<img width="1479" alt="Screenshot 2023-05-27 at 20 42 13" src="https://github.com/taijihagino/datadog/assets/12064399/1c13e1fc-e34b-41c9-9168-5997cfe91ab2">
 
 対象のファイルは、QRコード表示画面と管理画面です。それぞれ以下のように差し込んでください。
 
@@ -174,16 +174,28 @@ Dashboadの名前を付けて「New Dashboard」をクリックします。
 <img width="803" alt="Screenshot 2023-05-27 at 20 21 43" src="https://github.com/taijihagino/datadog/assets/12064399/54f003fd-26db-4733-a1e4-db1e17f032df">
 
 ### ウィジェットの追加
+ウィジェットは画面右側から追加できます。たくさんの種類のチャートやグラフが選べますが、今回はスタンダードな折れ線グラフを選んでみましょう。
+<img width="1315" alt="Screenshot 2023-05-27 at 20 29 12" src="https://github.com/taijihagino/datadog/assets/12064399/87db1f7f-4f01-45a8-b066-28a53fcdda81">
 
+今回の会員証アプリは非常にシンプルな作りになっているため、RUMでのアクションはほとんど発生しません。（RUMはユーザーの画面操作がメインとなるため）ですので、今回は対象アプリの画面の表示処理に対してのエラー発生数を指標としてチャートを作成したいと思います。
+<img width="1365" alt="Screenshot 2023-05-27 at 20 53 22" src="https://github.com/taijihagino/datadog/assets/12064399/64944953-9a67-4b6a-bf16-ff07694e7c66">
+<img width="1448" alt="Screenshot 2023-05-27 at 21 04 07" src="https://github.com/taijihagino/datadog/assets/12064399/389f4a89-6932-4fa5-8b6b-4c65d704c092">
 
 ### KPIの設定
-
+今回はエラー発生数を指標としたいので、KPIとしてエラー発生件数のしきい値を、マーカーとして設定します。意図的にエラーを発生させるのはちょっと大変なので、ここでは数値は適当な値で良いです。例では`2`を設定しています。
+<img width="1435" alt="Screenshot 2023-05-27 at 21 06 02" src="https://github.com/taijihagino/datadog/assets/12064399/f2dec310-ec1b-43b8-93f2-ca0ff2a5e236">
 
 ### 完成
+最後に、ウィジェット（チャート）の見出しを設定します。もちろん日本語で大丈夫です。設定したら右下の「Save」ボタンをクリックします。
+<img width="1439" alt="Screenshot 2023-05-27 at 21 06 49" src="https://github.com/taijihagino/datadog/assets/12064399/1487887a-44f8-4ad0-90c9-f5ad45ea9b8b">
 
+ダッシュボードにウィジェットが追加され、アプリの実行結果のデータが表示されています。
+<img width="1319" alt="Screenshot 2023-05-27 at 21 07 53" src="https://github.com/taijihagino/datadog/assets/12064399/fd515c68-9619-4b69-9154-6cbfe89c6424">
 
+拡大するとこんな感じに見えます。
+<img width="1465" alt="Screenshot 2023-05-27 at 21 08 19" src="https://github.com/taijihagino/datadog/assets/12064399/dc54b24e-e73d-42c5-9693-5c1cc941faf5">
 
-
+以上です。おつかれさまでした！
 
 
 
