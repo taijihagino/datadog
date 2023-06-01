@@ -42,8 +42,8 @@ Amazon Web Servicesの画面で「+ Add AWS Account(s)」をクリックしま�
 Datadogのアカウント作成時に生成されているAPI Keyが表示されます。ラジオボタンを選択して、右下の「Use API Key」ボタンをクリックします。
 <img width="1040" alt="Screenshot 2023-05-27 at 19 31 25" src="https://github.com/taijihagino/datadog/assets/12064399/90cbb17f-5f4f-4de3-8528-c00ff9d132dd">
 
-内容に問題がなければ、右下の「Launch CloudFormation Template」ボタンをクリックしてください。AWSのCloudFormation スタック作成の画面が開きます。
-<img width="1314" alt="Screenshot 2023-05-27 at 19 32 02" src="https://github.com/taijihagino/datadog/assets/12064399/30cc8477-0b6f-46dd-88ba-c69624e4a50e">
+ここでは **Send AWS Logs to Datadog** と **Enable Cloud Security Posture Management** は 「No」を選択しておいてください。右下の「Launch CloudFormation Template」ボタンをクリックすると、AWSのCloudFormation スタック作成の画面が開きます。
+![Screenshot 2023-06-01 at 14 02 23 copy](https://github.com/taijihagino/datadog/assets/12064399/dd2830f9-e293-4ef7-88fc-c38fc29f8d01)
 
 デフォルトでテンプレートやパラメーターがセットされた状態ですので、内容を確認して右下の「スタックの作成」ボタンをクリックします。
 <img width="1231" alt="Screenshot 2023-05-27 at 19 39 35" src="https://github.com/taijihagino/datadog/assets/12064399/adf42c86-07fe-4ffb-bb38-ea0ddd8c3191">
