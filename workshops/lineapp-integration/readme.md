@@ -149,6 +149,7 @@ AWSであれば、分析できる機能としてCloudWatchが使いやすいか�
 コードスニペットが表示されるので、これを今回は会員証アプリに差し込みます。ここで「dd.env」という環境変数に、対象の環境を識別できる文字列を設定しておくと、対象の環境からDatadogへ送られてくるテレメトリデータにこの値がタグとして付与されるので、Datadog上でデータを整理する際に役に立ちます。
 <img width="1479" alt="Screenshot 2023-05-27 at 20 42 13" src="https://github.com/taijihagino/datadog/assets/12064399/1c13e1fc-e34b-41c9-9168-5997cfe91ab2">
 
+#### Datadogのチュートリアル通りの方法
 対象のファイルは、QRコード表示画面と管理画面です。それぞれ以下のように差し込んでください。
 
 ■QRコード画面
@@ -160,6 +161,41 @@ AWSであれば、分析できる機能としてCloudWatchが使いやすいか�
 
 ``/line-mini-app-hands-on/frontend/components/admin/visit-list/VisitList.vue``
 <img width="1444" alt="Screenshot 2023-05-27 at 20 36 24" src="https://github.com/taijihagino/datadog/assets/12064399/45139d8b-e3e7-452d-9c60-eb1919ff745a">
+
+#### アレンジバージョン
+``frontend/layouts/default.vue`` に以下のように入れることで全部のファイルでDDへのデータ送信が行われます。
+
+```
+import { onMounted } from 'vue';
+import { datadogRum } from '@datadog/browser-rum';
+
+export default {
+  setup(){
+    onMounted(()=>{
+      datadogRum.init({
+          applicationId: '039b702e-69e8-4e96-96ba-07740385befc',
+          clientToken: 'pub9c0af3b4f5e43f3b97c47185c0e7667a',
+          site: 'datadoghq.com',
+          service:'taijihagino-line-member-card01',
+          env:'lineapp',
+          // Specify a version number to identify the deployed version of your application in Datadog 
+          // version: '1.0.0',
+          sessionSampleRate: 100,
+          sessionReplaySampleRate: 20,
+          trackUserInteractions: true,
+          trackResources: true,
+          trackLongTasks: true,
+          defaultPrivacyLevel:'mask-user-input'
+      });
+          
+      datadogRum.startSessionReplayRecording();
+    });
+  }
+}
+```
+
+<img width="1098" alt="Screenshot 2023-06-19 at 13 25 25" src="https://github.com/taijihagino/datadog/assets/12064399/0dbc874f-21d2-4c7d-accc-b3a76c15304f">
+
 
 コードの編集が終えたら、再度 ``yarn deploy`` を行います。
 
