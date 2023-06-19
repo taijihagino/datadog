@@ -150,6 +150,7 @@ AWSであれば、分析できる機能としてCloudWatchが使いやすいか�
 <img width="1479" alt="Screenshot 2023-05-27 at 20 42 13" src="https://github.com/taijihagino/datadog/assets/12064399/1c13e1fc-e34b-41c9-9168-5997cfe91ab2">
 
 #### Datadogのチュートリアル通りの方法
+RUMの対象としたいファイルにコードスニペットを記述します。
 対象のファイルは、QRコード表示画面と管理画面です。それぞれ以下のように差し込んでください。
 
 ■QRコード画面
@@ -162,7 +163,9 @@ AWSであれば、分析できる機能としてCloudWatchが使いやすいか�
 ``/line-mini-app-hands-on/frontend/components/admin/visit-list/VisitList.vue``
 <img width="1444" alt="Screenshot 2023-05-27 at 20 36 24" src="https://github.com/taijihagino/datadog/assets/12064399/45139d8b-e3e7-452d-9c60-eb1919ff745a">
 
+
 #### アレンジバージョン
+上位レイヤーとなるアプリケーションのファイルにコードスニペットを記述します。ここでは、デフォルトファイルに、コンポーネントがマウントされたタイミングで呼び出されるコールバック関数として記述しています。
 ``frontend/layouts/default.vue`` に以下のように入れることで全部のファイルでDDへのデータ送信が行われます。
 
 ```
