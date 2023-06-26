@@ -200,7 +200,8 @@ export default {
 <img width="1098" alt="Screenshot 2023-06-19 at 13 25 25" src="https://github.com/taijihagino/datadog/assets/12064399/0dbc874f-21d2-4c7d-accc-b3a76c15304f">
 
 #### 共通部分
-
+``package.json`` へ ``@datadog/browser-rum`` を追加します。
+![Screenshot 2023-06-26 at 19 52 21](https://github.com/taijihagino/datadog/assets/12064399/36b7a215-8c26-490c-8bce-ef440df3bf92)
 
 コードの編集が終えたら、再度 ``yarn deploy`` を行います。
 
