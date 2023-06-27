@@ -201,9 +201,11 @@ export default {
 
 #### 共通部分
 ``package.json`` へ ``@datadog/browser-rum`` を追加します。
+npmの場合： ``npm install @datadog/browser-rum``
+yarnの場合： ``yarn add @datadog/browser-rum``
 ![Screenshot 2023-06-26 at 19 52 21](https://github.com/taijihagino/datadog/assets/12064399/36b7a215-8c26-490c-8bce-ef440df3bf92)
 
-コードの編集が終えたら、再度 ``yarn deploy`` を行います。
+コードの編集が終えたら、再度 ``yarn deploy (npm run deploy)`` を行います。
 
 デプロイ完了後に会員証アプリを動かすと、データがDatadogへ流れ始めます。 RUM Application Summaryで、対象のアプリケーションを選択し、Performance Monitoringを選択すると、対象のアプリの各テレメトリデータが可視化されて表示されていることが確認できます。
 <img width="1479" alt="Screenshot 2023-05-27 at 20 10 27" src="https://github.com/taijihagino/datadog/assets/12064399/9dbd9ae2-9ea0-4728-8b41-87625e3d06a5">
