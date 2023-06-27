@@ -201,8 +201,9 @@ export default {
 
 #### 共通部分
 ``package.json`` へ ``@datadog/browser-rum`` を追加します。
-npmの場合： ``npm install @datadog/browser-rum``
-yarnの場合： ``yarn add @datadog/browser-rum``
+
+npmの場合： ``npm install @datadog/browser-rum`` <br>
+yarnの場合： ``yarn add @datadog/browser-rum`` <br><br>
 ![Screenshot 2023-06-26 at 19 52 21](https://github.com/taijihagino/datadog/assets/12064399/36b7a215-8c26-490c-8bce-ef440df3bf92)
 
 コードの編集が終えたら、再度 ``yarn deploy (npm run deploy)`` を行います。
