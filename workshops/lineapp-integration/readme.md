@@ -151,7 +151,7 @@ AWSであれば、分析できる機能としてCloudWatchが使いやすいか�
 
 #### Datadogのチュートリアル通りの方法
 RUMの対象としたいファイルにコードスニペットを記述します。
-対象のファイルは、QRコード表示画面と管理画面です。それぞれ以下のように差し込んでください。
+対象のファイルは、QRコード表示画面と管理画面です。それぞれ以下のように差し込んでください。この方法で実装する場合、コードを埋め込んだページを起点としてトレースが行われることに注意してください。
 
 ■QRコード画面
 
@@ -208,8 +208,11 @@ yarnの場合： ``yarn add @datadog/browser-rum`` <br><br>
 
 コードの編集が終えたら、再度 ``yarn deploy (npm run deploy)`` を行います。
 
-デプロイ完了後に会員証アプリを動かすと、データがDatadogへ流れ始めます。 RUM Application Summaryで、対象のアプリケーションを選択し、Performance Monitoringを選択すると、対象のアプリの各テレメトリデータが可視化されて表示されていることが確認できます。
+デプロイ完了後に会員証アプリを動かすと、データがDatadogへ流れ始めます。 Real User MonitoringからPerformance Monitoringを選択すると、対象のアプリの各テレメトリデータが可視化されて表示されていることが確認できます。
 <img width="1479" alt="Screenshot 2023-05-27 at 20 10 27" src="https://github.com/taijihagino/datadog/assets/12064399/9dbd9ae2-9ea0-4728-8b41-87625e3d06a5">
+
+また、アプリケーションの編集画面上の「③Verify your installation」でも連携状態（データの受信状態）が確認できます。
+![Screenshot 2023-07-06 at 10 35 32](https://github.com/taijihagino/datadog/assets/12064399/f9db9876-2456-4023-9811-84d440218d75)
 
 ### Dashbordの作成
 Dashboardメニューから「New Dashboard」を選択します。
