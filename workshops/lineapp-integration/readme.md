@@ -141,8 +141,8 @@ AWSであれば、分析できる機能としてCloudWatchが使いやすいか�
 
 ここでは、前のセクションで各自のAWS環境（Cloud9）へデプロイしたLINE APIを使った会員証アプリに、RUMを仕込んで行きましょう。
 
-［UX Monitoring］→［Application Summary］→［+ New Application］
-![Screenshot 2023-05-16 at 17 22 31](https://github.com/taijihagino/datadog/assets/12064399/af2d38b6-dd3b-45e7-b8ae-bd8aa2b77543)
+［UX Monitoring］→［Real User Monitoring］→［+ New Application］
+![Screenshot 2023-07-06 at 10 29 02](https://github.com/taijihagino/datadog/assets/12064399/bc05eb0b-d0da-4c72-b393-2f32ddeade93)
 
 ![Screenshot 2023-05-16 at 17 24 31](https://github.com/taijihagino/datadog/assets/12064399/83573ee6-a342-4714-a6dc-cf418927a5a9)
 
